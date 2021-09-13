@@ -53,4 +53,22 @@ class SpringDataJpaDemoApplicationTests {
 		System.out.println(studentList);
 	}
 
+	@Test
+	public void displayStudentByFirstName(){
+		List<Student> studentList = studentRepository.findByFirstName("Mark");
+		System.out.println(studentList);
+	}
+
+	@Test
+	public void displayStudentByFirstNameContaining(){
+		List<Student> studentList = studentRepository.findByFirstNameContaining("Ma");
+		System.out.println(studentList);
+	}
+
+	@Test
+	public void displayStudentBasedOnGuardianName(){
+		List<Student> studentList = studentRepository.findByGuardianName("Paul");
+		System.out.println(studentList);
+	}
+
 }
