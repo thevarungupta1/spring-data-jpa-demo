@@ -26,7 +26,7 @@ class CourseMaterialRepositoryTest {
 
         CourseMaterial courseMaterial = CourseMaterial.builder()
                 .url("http://localhost:8080")
-                .course(course)
+                //.course(course)
                 .build();
         repository.save(courseMaterial);
     }
